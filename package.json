@@ -1,0 +1,17 @@
+{
+  "name": "flight-sim-utility-scripts",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-row": "ts-node src/generate-row.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tabletop ANDROID",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "ts-node": "^10.9.2"
+  }
+}

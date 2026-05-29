@@ -5,6 +5,7 @@ import aircraftModels from "../assets/aircraft-models.json";
 interface ModelEntry {
   name: string;
   id: string;
+  offset?: number;
 }
 
 interface RowConfig {
@@ -13,6 +14,7 @@ interface RowConfig {
   heading: number;
   spacingMeters: number;
   count: number;
+  rowCount: number;
   rowDirection: number;
   models: ModelEntry[];
   displayName: string;
@@ -33,10 +35,13 @@ const config: RowConfig = {
   heading: -0.000014,
 
   // Spacing between aircraft in meters
-  spacingMeters: 12.0,
+  spacingMeters: 16.0,
 
   // Number of aircraft to place
   count: 9,
+
+  // Number of rows to place (if >1, rows will be spaced by spacingMeters and rowDirection)
+  rowCount: 2,
 
   // Direction the row extends (degrees)
   // 0 = row runs north, 90 = row runs east
@@ -86,31 +91,44 @@ function offsetCoord(
 function generateRow(cfg: RowConfig): string {
   const lines: string[] = [];
 
-  for (let i = 0; i < cfg.count; i++) {
-    const pos = offsetCoord(
+  for (let x = 0; x < cfg.rowCount; x++) {
+    const rowStart = offsetCoord(
       cfg.startLat,
       cfg.startLon,
-      cfg.spacingMeters * i,
-      cfg.rowDirection,
+      cfg.spacingMeters * x,
+      (cfg.rowDirection + 90) % 360,
     );
+    lines.push(`\t<!-- Row ${x + 1} -->`);
+    for (let i = 0; i < cfg.count; i++) {
+      const pos = offsetCoord(
+        rowStart.lat,
+        rowStart.lon,
+        cfg.spacingMeters * i,
+        cfg.rowDirection,
+      );
 
-    const model = cfg.models[Math.floor(Math.random() * cfg.models.length)];
+      const model = cfg.models[Math.floor(Math.random() * cfg.models.length)];
+      // calculate adjustment to intended heading
+      const offsetHeading = model.offset
+        ? cfg.heading - model.offset
+        : cfg.heading;
 
-    lines.push(`\t<!--SceneryObject name: ${model.name} ${i + 1}-->`);
-    lines.push(
-      `\t<SceneryObject displayName="${cfg.displayName} ${i + 1}" ` +
-        `parentGroupID="${cfg.parentGroupID}" groupIndex="${i + 1}" ` +
-        `lat="${pos.lat.toFixed(15)}" lon="${pos.lon.toFixed(15)}" ` +
-        `alt="0.00000000000000" pitch="0.000000" bank="0.000000" ` +
-        `heading="${cfg.heading.toFixed(6)}" ` +
-        `imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" ` +
-        `snapToGround="TRUE" snapToNormal="FALSE">`,
-    );
-    lines.push(`\t\t<UseInstancing/>`);
-    lines.push(`\t\t<LibraryObject name="${model.id}" scale="1.000000"/>`);
-    lines.push(`\t</SceneryObject>`);
+      lines.push(`\t<!--SceneryObject name: ${model.name} ${i + 1}-->`);
+      lines.push(
+        `\t<SceneryObject displayName="${cfg.displayName} ${i + 1}" ` +
+          `parentGroupID="${cfg.parentGroupID}" groupIndex="${i + 1}" ` +
+          `lat="${pos.lat.toFixed(15)}" lon="${pos.lon.toFixed(15)}" ` +
+          `alt="0.00000000000000" pitch="0.000000" bank="0.000000" ` +
+          `heading="${offsetHeading.toFixed(6)}" ` +
+          `imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" ` +
+          `snapToGround="TRUE" snapToNormal="FALSE">`,
+      );
+      lines.push(`\t\t<UseInstancing/>`);
+      lines.push(`\t\t<LibraryObject name="${model.id}" scale="1.000000"/>`);
+      lines.push(`\t</SceneryObject>`);
+    }
+    lines.push("\n");
   }
-
   return lines.join("\n");
 }
 

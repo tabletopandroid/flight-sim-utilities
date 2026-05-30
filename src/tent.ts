@@ -8,13 +8,15 @@ export function placeTent(
   index: number,
   cfg: RowConfig,
 ): string {
-  const tentModel = simAssets.find((asset) => asset.type === "tent");
+  const tentAssets = simAssets.filter((asset) => asset.type === "tent");
+  const tentModel = tentAssets[Math.floor(Math.random() * tentAssets.length)];
+
   if (!tentModel) {
     throw new Error("Tent model not found in sim assets");
   }
 
   return (
-    `\t<!--SceneryObject name: Generic Tent ${index}-->` +
+    `\t<!--SceneryObject name: ${tentModel.name} ${index}-->` +
     "\n" +
     `\t<SceneryObject displayName="${tentModel.name} ${index}" ` +
     `parentGroupID="${cfg.parentGroupID}" groupIndex="${index}" ` +

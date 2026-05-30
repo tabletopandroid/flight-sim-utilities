@@ -26,10 +26,10 @@ const config: RowConfig = {
   columnLength: 150.0,
 
   // Length of all rows in meters (optional, overrides columnCount)
-  rowLength: 80, // 940
+  rowLength: 1000, // 940
 
   // Density of placement (optional, adjusts spacing)
-  density: "medium",
+  density: "dense",
 
   // Number of columns to place (if >1, columns will be spaced by rowSpacing perpendicular to columnDirection)
   columnCount: 2,
@@ -62,20 +62,21 @@ let reportTotalRows = 0;
 function generateParkingRow(cfg: RowConfig): string {
   const lines: string[] = [];
 
-  // Calculate effective spacing based on density
-  const densityMultipliers: Record<"sparse" | "medium" | "dense", number> = {
-    sparse: 1.5,
-    medium: 1.0,
-    dense: 0.7,
+  const densityProbabilities: Record<"sparse" | "medium" | "dense", number> = {
+    sparse: 0.4,
+    medium: 0.65,
+    dense: 0.9,
   };
-  const densityMultiplier = cfg.density ? densityMultipliers[cfg.density] : 1.0;
+  const densityProbability = cfg.density
+    ? densityProbabilities[cfg.density]
+    : 1.0;
 
   // Apply tail-to-tail spacing reduction (tighter packing)
   const tailToTailSpacingMultiplier =
     cfg.orientation === "tail-to-tail" ? 0.8 : 1.0;
 
   const effectiveColumnSpacing =
-    cfg.columnSpacing * densityMultiplier * tailToTailSpacingMultiplier;
+    cfg.columnSpacing * tailToTailSpacingMultiplier;
   const effectiveRowSpacing = cfg.rowSpacing ?? cfg.columnSpacing;
 
   // Calculate count from columnLength if provided, otherwise use cfg.count
@@ -97,8 +98,10 @@ function generateParkingRow(cfg: RowConfig): string {
       effectiveRowSpacing * x,
       (cfg.columnDirection + 90) % 360,
     );
-    lines.push(`\t<!-- Column ${x + 1} -->`);
+    lines.push(`\t<!-- Generated Column ${x + 1} -->`);
     for (let i = 0; i < aircraftCount; i++) {
+      if (Math.random() > densityProbability) continue;
+
       let pos = offsetCoord(
         columnStart.lat,
         columnStart.lon,
@@ -123,9 +126,11 @@ function generateParkingRow(cfg: RowConfig): string {
         offsetHeading = (offsetHeading + 180) % 360;
       }
 
-      lines.push(`\t<!--SceneryObject name: ${model.name} ${i + 1}-->`);
       lines.push(
-        `\t<SceneryObject displayName="${cfg.displayName} ${i + 1} - Column ${x + 1}" ` +
+        `\t<!-- Generated SceneryObject name: ${model.name} ${i + 1} - Row ${x + 1} -->`,
+      );
+      lines.push(
+        `\t<SceneryObject displayName="${cfg.displayName} ${i + 1} - Row ${x + 1}" ` +
           `parentGroupID="${cfg.parentGroupID}" groupIndex="${i + 1}" ` +
           `lat="${pos.lat.toFixed(15)}" lon="${pos.lon.toFixed(15)}" ` +
           `alt="0.00000000000000" pitch="0.000000" bank="0.000000" ` +

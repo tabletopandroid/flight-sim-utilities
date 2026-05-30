@@ -1,0 +1,17 @@
+[
+  {
+    "name": "MountainTent01_Dynamic",
+    "id": "{DE802839-CE24-40D2-AB25-9B6174CD1312}",
+    "type": "tent"
+  },
+  {
+    "name": "MountainTent01_Orange",
+    "id": "{8D33BA13-A930-462E-B36B-BCACC1146A95}",
+    "type": "tent"
+  },
+  {
+    "name": "MountainTent01_Red",
+    "id": "{7066A9F9-A1CA-44FD-B290-ABB98D1C12AE}",
+    "type": "tent"
+  }
+]

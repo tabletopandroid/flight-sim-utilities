@@ -2,164 +2,227 @@
   {
     "name": "ESD_AC_ST10",
     "id": "{5264496A-6F50-4467-8342-062F279B3DB5}",
+    "wingspan": 12,
     "type": "single-prop",
-    "library": "internal"
+    "library": "internal",
+    "package": "esd-modellib-eolib"
   },
   {
     "name": "ESD_AC_SR22",
     "id": "{E316BE55-64C3-46C2-B170-C6CF024A74B8}",
+    "wingspan": 12,
     "type": "single-prop",
-    "library": "internal"
+    "library": "internal",
+    "package": "esd-modellib-eolib"
   },
   {
     "name": "ESD_AC_PA28_Cadet",
     "id": "{0E45B4AE-7F5A-4B4A-B8E4-5F27ACE9B164}",
+    "wingspan": 11,
     "type": "single-prop",
-    "library": "internal"
+    "library": "internal",
+    "package": "esd-modellib-eolib"
   },
   {
     "name": "ESD_AC_PA18",
     "id": "{66F14DC3-4525-4646-8693-369C9B6A04A9}",
+    "wingspan": 11,
     "type": "single-prop",
-    "library": "internal"
+    "library": "internal",
+    "package": "esd-modellib-eolib"
   },
   {
     "name": "ESD_AC_J3_Cub",
     "id": "{C02880D3-92FC-45CF-9E50-4DE222465ADB}",
     "offset": 90,
+    "wingspan": 11,
     "type": "single-prop",
-    "library": "internal"
+    "library": "internal",
+    "package": "esd-modellib-eolib"
   },
   {
     "name": "ESD_AC_FK9",
     "id": "{AC2DD082-C7BB-423C-86BF-9A50ED790B13}",
+    "wingspan": 10,
     "type": "single-prop",
-    "library": "internal"
+    "library": "internal",
+    "package": "esd-modellib-eolib"
+  },
+  {
+    "name": "ESD_AC_DHC2_Floats_Static_Microsoft",
+    "id": "{18BF2963-E633-486A-B313-D3F0E6D70CB7}",
+    "offset": 270,
+    "wingspan": 15,
+    "type": "single-prop",
+    "library": "internal",
+    "package": "esd-modellib-eolib"
+  },
+  {
+    "name": "ESD_AC_Jodel_Floats_Static_Microsoft",
+    "id": "{FC422FC7-9584-48D0-B5F2-A0F504918442}",
+    "offset": 90,
+    "wingspan": 9,
+    "type": "single-prop",
+    "library": "internal",
+    "package": "esd-modellib-eolib"
   },
   {
     "name": "totof-beech001",
     "id": "{DFCA5268-85D4-4A0F-233D-DC947FE4F6AE}",
+    "offset": 270,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-beech002",
     "id": "{21A2F54E-7DBF-4D38-F0AC-47379F07EE01}",
+    "offset": 90,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-Cessna172-001",
     "id": "{026F938C-38CF-49C9-4390-ED8E584C33E1}",
+    "offset": 270,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-da20ulm",
     "id": "{65111BCD-7DC5-4310-F6F3-55BE249AB936}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-ulm-mk2",
     "id": "{B1105690-7AA9-4D2E-C094-BEB86A9DBAB7}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-savage",
     "id": "{BB3E9743-8C5D-40E3-71DF-E4C5514F7780}",
+    "offset": 270,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-savage-v2",
     "id": "{F0495063-80E4-4B85-0D29-A3B97B38ADAA}",
+    "offset": 90,
     "type": "",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-maule",
     "id": "{FDF8DA4A-4829-4A37-1CEE-F8374D25262F}",
+    "offset": 270,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-ulm-skyranger",
     "id": "{5310C8F3-0D9D-4C91-E3E2-BA5EB0D41488}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-ulm-skyranger-bleu",
     "id": "{2DD1AF21-0752-4AF8-3F6E-7D288982C073}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-joel-250-002f-bmze",
     "id": "{CE767A30-8DA1-4CE2-6F9A-481C34394C6A}",
+    "offset": 270,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-jodel-250-001",
     "id": "{FCDEA451-F118-4A38-480E-61F2EA544A0F}",
+    "offset": 270,
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-jodel-d11-fpmxh",
     "id": "{E88B3215-303C-4048-D034-A5047F15DA7D}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-jodel-d11-fpluq",
     "id": "{CECDD775-92DF-4596-9641-279B58E1D793}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-jodel-dr221-beranger1",
     "id": "{7199742D-A46C-4148-1C7B-C0180B0CB122}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-jodel-dr221-beranger-1f-bnga",
     "id": "{33057C39-B536-4F8A-0558-BABAC0F704EA}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-jodel-dr221-beranger-1f-bozu",
     "id": "{2B795C68-46CF-4893-EAF3-3D303395ACE2}",
     "type": "single-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-tbm900-01",
     "id": "{F9BFDE94-F371-43E8-DCA0-53BF3746ACEA}",
+    "offset": 270,
     "type": "turbo-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-tbm900-02",
     "id": "{6C3C4E8B-D878-4334-7BDB-8796AF2B850B}",
+    "offset": 90,
     "type": "turbo-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-tbm900-03",
     "id": "{1DF1D30E-2D8C-4A94-68E1-BA56CFE1C37C}",
+    "offset": 90,
     "type": "turbo-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   },
   {
     "name": "totof-tbm900-05",
     "id": "{0B47B787-9A91-4694-4F9F-8DBF20346221}",
+    "offset": 90,
     "type": "turbo-prop",
-    "library": "third-party"
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   }
 ]

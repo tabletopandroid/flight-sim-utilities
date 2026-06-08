@@ -2,16 +2,64 @@
   {
     "name": "MountainTent01_Dynamic",
     "id": "{DE802839-CE24-40D2-AB25-9B6174CD1312}",
-    "type": "tent"
+    "type": "tent",
+    "library": "internal",
+    "package": "asobo-modellib-assets"
   },
   {
     "name": "MountainTent01_Orange",
     "id": "{8D33BA13-A930-462E-B36B-BCACC1146A95}",
-    "type": "tent"
+    "type": "tent",
+    "library": "internal",
+    "package": "asobo-modellib-assets"
   },
   {
     "name": "MountainTent01_Red",
     "id": "{7066A9F9-A1CA-44FD-B290-ABB98D1C12AE}",
-    "type": "tent"
+    "type": "tent",
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "ESD_Clu_Tent_Blue",
+    "id": "{C0806AA5-7526-469D-A587-4000E027BE38}",
+    "type": "tent",
+    "library": "internal",
+    "package": "eso-modellib-eolib"
+  },
+  {
+    "name": "ESD_Clu_Tent_ESD",
+    "id": "{88D728BD-661A-4CC6-9EA7-AD4EA5E164E3}",
+    "type": "tent",
+    "library": "internal",
+    "package": "eso-modellib-eolib"
+  },
+  {
+    "name": "ESD_Clu_Tent_GotFriends",
+    "id": "{85BD21E7-ACEA-406A-A94E-6937D1A1B331}",
+    "type": "tent",
+    "library": "internal",
+    "package": "eso-modellib-eolib"
+  },
+  {
+    "name": "ESD_Clu_Tent_Green",
+    "id": "{ED445414-2055-400E-AF26-DEAFA8439E20}",
+    "type": "tent",
+    "library": "internal",
+    "package": "eso-modellib-eolib"
+  },
+  {
+    "name": "ESD_Clu_Tent_Yellow",
+    "id": "{263D1531-9AC5-48B3-A58C-B79C3A07091F}",
+    "type": "tent",
+    "library": "internal",
+    "package": "eso-modellib-eolib"
+  },
+  {
+    "name": "ESD_Clu_Tent_Red",
+    "id": "{C7D25544-6A6B-421A-BDE4-7AC4ECA5F884}",
+    "type": "tent",
+    "library": "internal",
+    "package": "eso-modellib-eolib"
   }
 ]

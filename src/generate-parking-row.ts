@@ -2,8 +2,9 @@ import fs from "fs";
 import path from "path";
 import aircraftModels from "../assets/aircraft-models.json";
 import { offsetCoord } from "./utils";
-import { RowConfig } from "./types";
+import { ModelEntry, RowConfig } from "./types";
 import { placeTent } from "./tent";
+import { placeCrowd } from "./crowd";
 
 const config: RowConfig = {
   // Starting position
@@ -14,9 +15,9 @@ const config: RowConfig = {
   heading: -0.000014,
 
   // Spacing between aircraft in the same column (meters)
-  columnSpacing: 14.0,
+  columnSpacing: 2,
 
-  // Spacing between columns/rows (meters). Defaults to columnSpacing if not specified.
+  // Spacing between rows (meters). Defaults to columnSpacing if not specified.
   rowSpacing: 26.0,
 
   // Number of aircraft to place
@@ -26,7 +27,7 @@ const config: RowConfig = {
   columnLength: 150.0,
 
   // Length of all rows in meters (optional, overrides columnCount)
-  rowLength: 1000, // 940
+  rowLength: 60, // 60, 1000
 
   // Density of placement (optional, adjusts spacing)
   density: "dense",
@@ -39,22 +40,34 @@ const config: RowConfig = {
   columnDirection: 180.0,
 
   // Orientation of aircraft in row (nose-to-nose or tail-to-tail)
-  orientation: "tail-to-tail",
+  orientation: "nose-to-nose",
 
   // Models to place — one is chosen at random for each object
   models: aircraftModels,
+
+  aircraftTypes: ["single-prop"],
+
+  library: "internal", // filter to only include models from this library (e.g. "internal", "third-party")
 
   // Display name prefix
   displayName: "North 40 Aircraft",
 
   // Group ID (match your existing parentGroupID scheme)
-  parentGroupID: 3,
+  parentGroupID: 18,
 
   // Enable tent placement
   tents: true,
 
   // Probability of placing a tent near each aircraft (0-1, default 0.2)
   tentDensity: 0.4,
+
+  // Enable crowd placement
+  crowds: true,
+
+  // Probability of placing a crowd near each aircraft (0-1, default 0.2)
+  crowdDensity: 0.4,
+
+  crowdCount: 3, // Number of people in each crowd (if crowds enabled)
 };
 
 let reportTotalRows = 0;
@@ -79,10 +92,18 @@ function generateParkingRow(cfg: RowConfig): string {
     cfg.columnSpacing * tailToTailSpacingMultiplier;
   const effectiveRowSpacing = cfg.rowSpacing ?? cfg.columnSpacing;
 
-  // Calculate count from columnLength if provided, otherwise use cfg.count
-  const aircraftCount = cfg.columnLength
-    ? Math.floor(cfg.columnLength / effectiveColumnSpacing)
-    : cfg.count;
+  // Filter models to only those matching the configured aircraft types and library
+  const eligibleModels = cfg.models.filter(
+    (model) =>
+      cfg.aircraftTypes.includes(model.type ?? "") &&
+      model.library === cfg.library,
+  );
+
+  if (eligibleModels.length === 0) {
+    throw new Error(
+      `No models match aircraftTypes ${JSON.stringify(cfg.aircraftTypes)} and library "${cfg.library}"`,
+    );
+  }
 
   // Calculate columnCount from rowLength if provided, otherwise use cfg.columnCount
   const columnCount = cfg.rowLength
@@ -99,13 +120,47 @@ function generateParkingRow(cfg: RowConfig): string {
       (cfg.columnDirection + 90) % 360,
     );
     lines.push(`\t<!-- Generated Column ${x + 1} -->`);
+
+    // Build the column slot-by-slot rather than pre-sizing it: wingspan-aware gaps
+    // (see below) mean the number of aircraft that fit in columnLength isn't known
+    // up front. Models are still chosen for every slot before placement (rather than
+    // per-placement) so spacing stays consistent even for slots the density roll skips.
+    const columnModels: ModelEntry[] = [];
+    const slotOffsets: number[] = [];
+    let cumulativeOffset = 0;
+    while (true) {
+      if (cfg.columnLength === undefined && columnModels.length >= cfg.count) {
+        break;
+      }
+
+      const candidate =
+        eligibleModels[Math.floor(Math.random() * eligibleModels.length)];
+      const previous = columnModels[columnModels.length - 1];
+
+      // columnSpacing is treated as the wingtip clearance gap, widened by the
+      // average of the two neighboring aircrafts' wingspans so larger models
+      // don't overlap their neighbors.
+      const offset = previous
+        ? cumulativeOffset +
+          effectiveColumnSpacing +
+          ((previous.wingspan ?? 0) + (candidate.wingspan ?? 0)) / 2
+        : 0;
+
+      if (cfg.columnLength !== undefined && offset > cfg.columnLength) break;
+
+      columnModels.push(candidate);
+      slotOffsets.push(offset);
+      cumulativeOffset = offset;
+    }
+    const aircraftCount = columnModels.length;
+
     for (let i = 0; i < aircraftCount; i++) {
       if (Math.random() > densityProbability) continue;
 
       let pos = offsetCoord(
         columnStart.lat,
         columnStart.lon,
-        effectiveColumnSpacing * i,
+        slotOffsets[i],
         cfg.columnDirection,
       );
 
@@ -115,7 +170,7 @@ function generateParkingRow(cfg: RowConfig): string {
         pos = { lat: pos.lat, lon: lonShift.lon };
       }
 
-      const model = cfg.models[Math.floor(Math.random() * cfg.models.length)];
+      const model = columnModels[i];
       // calculate adjustment to intended heading
       let offsetHeading = model.offset
         ? cfg.heading - model.offset
@@ -143,10 +198,11 @@ function generateParkingRow(cfg: RowConfig): string {
       lines.push(`\t</SceneryObject>`);
 
       // Randomly place tents if enabled
+      let tentSideOffset: number | undefined;
       if (cfg.tents && Math.random() < (cfg.tentDensity ?? 0.2)) {
         // Random side: left (-90) or right (+90) perpendicular to column direction
-        const sideOffset = Math.random() < 0.5 ? -90 : 90;
-        const sideDirection = (cfg.columnDirection + sideOffset) % 360;
+        tentSideOffset = Math.random() < 0.5 ? -90 : 90;
+        const sideDirection = (cfg.columnDirection + tentSideOffset) % 360;
 
         // Offset toward tail (opposite of column direction) by ~8 meters
         const tailOffset = (cfg.columnDirection + 180) % 360;
@@ -172,6 +228,36 @@ function generateParkingRow(cfg: RowConfig): string {
             finalTentPos.lon,
             cfg.heading,
             i + 1,
+            cfg,
+          ),
+        );
+      }
+
+      // Randomly place a crowd if enabled
+      if (cfg.crowds && Math.random() < (cfg.crowdDensity ?? 0.2)) {
+        // Stand on the side opposite any tent so the two stay clear of each other
+        const crowdSideOffset =
+          tentSideOffset !== undefined
+            ? -tentSideOffset
+            : Math.random() < 0.5
+              ? -90
+              : 90;
+        const crowdDirection = (cfg.columnDirection + crowdSideOffset) % 360;
+
+        const crowdPos = offsetCoord(
+          pos.lat,
+          pos.lon,
+          1.0, // distance from the aircraft, clear of any tent
+          crowdDirection,
+        );
+
+        lines.push(
+          placeCrowd(
+            crowdPos.lat,
+            crowdPos.lon,
+            cfg.heading,
+            i + 1,
+            "standing",
             cfg,
           ),
         );

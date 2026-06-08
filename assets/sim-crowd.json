@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Crowds_Standing_01",
+    "id": "{9E84E549-6326-4C25-AB6F-1E5574CA48BB}",
+    "action": "standing",
+    "count": 10,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_02",
+    "id": "{C4F70719-B2F1-4AC6-BA9F-2CA3C81B048D}",
+    "action": "standing",
+    "count": 8,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_03",
+    "id": "{E014BCC4-AD2C-4147-BF9A-18031859B25C}",
+    "action": "standing",
+    "count": 16,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_04",
+    "id": "{D7D24227-05B6-4B94-A540-145BECD1CC03}",
+    "action": "standing",
+    "count": 5,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_05",
+    "id": "{BBA651BE-C3CA-4539-B040-A961A685C9FD}",
+    "action": "standing",
+    "count": 16,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_06_Orange",
+    "id": "{96A7097B-EAFB-4245-963E-4A6C8A46A77C}",
+    "action": "standing",
+    "count": 10,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_07",
+    "id": "{27838BDB-57E6-4F2F-AF4D-35DEA4B16307}",
+    "action": "standing",
+    "count": 16,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_08",
+    "id": "{DCC332EB-E39F-4B78-98EE-72834E070E9A}",
+    "action": "standing",
+    "count": 29,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_09",
+    "id": "{AB978A34-0106-4B60-95BC-1EA7DB6B2D38}",
+    "action": "standing",
+    "count": 3,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_10",
+    "id": "{1653CA24-0353-413C-B9AA-B364798ED79B}",
+    "action": "standing",
+    "count": 2,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_11",
+    "id": "{9C530750-5AB2-4E44-A157-8C7E6A2EB53A}",
+    "action": "standing",
+    "count": 1,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_12",
+    "id": "{04FBF4F0-F046-48D3-A77D-A0F1CFEF5346}",
+    "action": "standing",
+    "count": 2,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_13",
+    "id": "{F6BD19AF-F40D-4F15-9484-E8166A315E61}",
+    "action": "standing",
+    "count": 1,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  },
+  {
+    "name": "Crowds_Standing_14",
+    "id": "{66B8D4D7-32A0-4F0D-ABAE-819D74A83499}",
+    "action": "standing",
+    "count": 1,
+    "library": "internal",
+    "package": "asobo-modellib-assets"
+  }
+]

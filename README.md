@@ -38,3 +38,7 @@ dist/            Generated output (git-ignored)
 1. Create `src/<script-name>.ts`
 2. Add an npm script to `package.json`: `"<script-name>": "ts-node src/<script-name>.ts"`
 3. Add a usage doc at `docs/<script-name>.md`
+
+## Working with MSFS DevMode
+
+Manually editing the scenery `.xml` is tricky. When it comes to folder strucruting, do it in DevMode and save the scenery. Then you can open the `.xml` file and see what `groupID` was assigned.

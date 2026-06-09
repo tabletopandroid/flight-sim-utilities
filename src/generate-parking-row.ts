@@ -8,8 +8,8 @@ import { placeCrowd } from "./crowd";
 
 const config: RowConfig = {
   // Starting position
-  startLat: 43.99070849009291,
-  startLon: -88.56341921768873,
+  startLat: 43.995609048,
+  startLon: -88.554624809,
 
   // Aircraft heading (degrees, 0 = north, 90 = east)
   heading: -0.000014,
@@ -24,10 +24,16 @@ const config: RowConfig = {
   count: 9,
 
   // Length of each column in meters (optional, overrides count)
-  columnLength: 150.0,
+  columnLength: 300.0,
 
   // Length of all rows in meters (optional, overrides columnCount)
-  rowLength: 60, // 60, 1000
+  rowLength: 1500, // 60, 1000
+
+  // Group ID (match your existing parentGroupID scheme)
+  parentGroupID: 5,
+
+  // Group ID for third-party models — the "DEPENDENCIES/totof" folder
+  thirdPartyGroupID: 35,
 
   // Density of placement (optional, adjusts spacing)
   density: "dense",
@@ -40,32 +46,26 @@ const config: RowConfig = {
   columnDirection: 180.0,
 
   // Orientation of aircraft in row (nose-to-nose or tail-to-tail)
-  orientation: "nose-to-nose",
+  orientation: "tail-to-tail",
 
   // Models to place — one is chosen at random for each object
   models: aircraftModels,
 
-  aircraftTypes: ["single-prop"],
+  aircraftTypes: ["single-prop", "turbo-prop"], // filter to only include models of these types (e.g. "single-prop", "turbo-prop", "jet")
 
-  library: "internal", // filter to only include models from this library (e.g. "internal", "third-party")
-
-  // Display name prefix
-  displayName: "North 40 Aircraft",
-
-  // Group ID (match your existing parentGroupID scheme)
-  parentGroupID: 18,
+  library: ["internal", "third-party"], // filter to only include models from this library (e.g. "internal", "third-party")
 
   // Enable tent placement
   tents: true,
 
   // Probability of placing a tent near each aircraft (0-1, default 0.2)
-  tentDensity: 0.4,
+  tentDensity: 0.6,
 
   // Enable crowd placement
   crowds: true,
 
   // Probability of placing a crowd near each aircraft (0-1, default 0.2)
-  crowdDensity: 0.4,
+  crowdDensity: 0.5,
 
   crowdCount: 3, // Number of people in each crowd (if crowds enabled)
 };
@@ -84,9 +84,10 @@ function generateParkingRow(cfg: RowConfig): string {
     ? densityProbabilities[cfg.density]
     : 1.0;
 
-  // Apply tail-to-tail spacing reduction (tighter packing)
+  // Apply tail-to-tail spacing reduction (tighter packing) — the lateral stagger
+  // below lets neighboring tails nest past each other, so the column can run tighter
   const tailToTailSpacingMultiplier =
-    cfg.orientation === "tail-to-tail" ? 0.8 : 1.0;
+    cfg.orientation === "tail-to-tail" ? 0.2 : 1.0;
 
   const effectiveColumnSpacing =
     cfg.columnSpacing * tailToTailSpacingMultiplier;
@@ -96,12 +97,12 @@ function generateParkingRow(cfg: RowConfig): string {
   const eligibleModels = cfg.models.filter(
     (model) =>
       cfg.aircraftTypes.includes(model.type ?? "") &&
-      model.library === cfg.library,
+      cfg.library.includes(model.library ?? ""),
   );
 
   if (eligibleModels.length === 0) {
     throw new Error(
-      `No models match aircraftTypes ${JSON.stringify(cfg.aircraftTypes)} and library "${cfg.library}"`,
+      `No models match aircraftTypes ${JSON.stringify(cfg.aircraftTypes)} and library ${JSON.stringify(cfg.library)}`,
     );
   }
 
@@ -164,13 +165,23 @@ function generateParkingRow(cfg: RowConfig): string {
         cfg.columnDirection,
       );
 
-      // For tail-to-tail, odd-indexed aircraft are offset 1.5m east (longitude only)
-      if (cfg.orientation === "tail-to-tail" && i % 2 === 1) {
-        const lonShift = offsetCoord(pos.lat, pos.lon, -1.5, 90);
-        pos = { lat: pos.lat, lon: lonShift.lon };
+      // For tail-to-tail, stagger alternating aircraft to opposite sides of the
+      // column line so neighboring tails nest past each other instead of colliding —
+      // this is what lets the column run tighter than a straight line would allow.
+      if (cfg.orientation === "tail-to-tail") {
+        const staggerSide = i % 2 === 0 ? -90 : 90;
+        const staggerDirection = (cfg.columnDirection + staggerSide) % 360;
+        pos = offsetCoord(pos.lat, pos.lon, 2.5, staggerDirection);
       }
 
       const model = columnModels[i];
+
+      // Third-party models live in their own scenery group (e.g. the "totof" folder)
+      const groupID =
+        model.library === "third-party"
+          ? (cfg.thirdPartyGroupID ?? cfg.parentGroupID)
+          : cfg.parentGroupID;
+
       // calculate adjustment to intended heading
       let offsetHeading = model.offset
         ? cfg.heading - model.offset
@@ -185,8 +196,8 @@ function generateParkingRow(cfg: RowConfig): string {
         `\t<!-- Generated SceneryObject name: ${model.name} ${i + 1} - Row ${x + 1} -->`,
       );
       lines.push(
-        `\t<SceneryObject displayName="${cfg.displayName} ${i + 1} - Row ${x + 1}" ` +
-          `parentGroupID="${cfg.parentGroupID}" groupIndex="${i + 1}" ` +
+        `\t<SceneryObject displayName="${model.name} ${i + 1} - Row ${x + 1}" ` +
+          `parentGroupID="${groupID}" groupIndex="${i + 1}" ` +
           `lat="${pos.lat.toFixed(15)}" lon="${pos.lon.toFixed(15)}" ` +
           `alt="0.00000000000000" pitch="0.000000" bank="0.000000" ` +
           `heading="${offsetHeading.toFixed(6)}" ` +
@@ -198,11 +209,10 @@ function generateParkingRow(cfg: RowConfig): string {
       lines.push(`\t</SceneryObject>`);
 
       // Randomly place tents if enabled
-      let tentSideOffset: number | undefined;
       if (cfg.tents && Math.random() < (cfg.tentDensity ?? 0.2)) {
         // Random side: left (-90) or right (+90) perpendicular to column direction
-        tentSideOffset = Math.random() < 0.5 ? -90 : 90;
-        const sideDirection = (cfg.columnDirection + tentSideOffset) % 360;
+        const sideOffset = Math.random() < 0.5 ? -90 : 90;
+        const sideDirection = (cfg.columnDirection + sideOffset) % 360;
 
         // Offset toward tail (opposite of column direction) by ~8 meters
         const tailOffset = (cfg.columnDirection + 180) % 360;
@@ -226,7 +236,7 @@ function generateParkingRow(cfg: RowConfig): string {
           placeTent(
             finalTentPos.lat,
             finalTentPos.lon,
-            cfg.heading,
+            Math.random() * 360,
             i + 1,
             cfg,
           ),
@@ -235,27 +245,34 @@ function generateParkingRow(cfg: RowConfig): string {
 
       // Randomly place a crowd if enabled
       if (cfg.crowds && Math.random() < (cfg.crowdDensity ?? 0.2)) {
-        // Stand on the side opposite any tent so the two stay clear of each other
-        const crowdSideOffset =
-          tentSideOffset !== undefined
-            ? -tentSideOffset
-            : Math.random() < 0.5
-              ? -90
-              : 90;
-        const crowdDirection = (cfg.columnDirection + crowdSideOffset) % 360;
+        // Position relative to the aircraft's actual rendered heading (not the
+        // column direction) so "left"/"right"/"middle" are relative to the plane
+        // itself: left of the fuselage, right of the fuselage, or out front of the nose.
+        const placement = ["left", "right", "middle"][
+          Math.floor(Math.random() * 3)
+        ];
+        const crowdBearing =
+          placement === "left"
+            ? (offsetHeading + 270) % 360
+            : placement === "right"
+              ? (offsetHeading + 90) % 360
+              : offsetHeading;
+
+        // Clear the wingspan footprint first, then stand 1m beyond it
+        const crowdDistance = (model.wingspan ?? 0) / 2 + 1.0;
 
         const crowdPos = offsetCoord(
           pos.lat,
           pos.lon,
-          1.0, // distance from the aircraft, clear of any tent
-          crowdDirection,
+          crowdDistance,
+          crowdBearing,
         );
 
         lines.push(
           placeCrowd(
             crowdPos.lat,
             crowdPos.lon,
-            cfg.heading,
+            Math.random() * 360,
             i + 1,
             "standing",
             cfg,

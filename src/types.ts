@@ -32,9 +32,9 @@ export interface RowConfig {
   density?: "sparse" | "medium" | "dense";
   models: ModelEntry[];
   aircraftTypes: string[]; // filter to only include models of these types (e.g. "single-prop", "turbo-prop")
-  library: string; // filter to only include models from this library (e.g. "internal", "third-party")
-  displayName: string;
+  library: string[]; // filter to only include models from this library (e.g. "internal", "third-party")
   parentGroupID: number;
+  thirdPartyGroupID?: number; // parentGroupID to use for models whose library is "third-party" (e.g. the "totof" folder), defaults to parentGroupID
   tents?: boolean; // optional, if true will add a tent object at the end of each row
   tentDensity?: number; // probability (0-1) of placing a tent, default 0.2 (20%)
   crowds: boolean; // if true will add a crowd object at the end of each row

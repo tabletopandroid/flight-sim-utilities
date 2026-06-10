@@ -8,8 +8,8 @@ import { placeCrowd } from "./crowd";
 
 const config: RowConfig = {
   // Starting position
-  startLat: 43.995609048,
-  startLon: -88.554624809,
+  startLat: 43.995612334,
+  startLon: -88.554664971,
 
   // Aircraft heading (degrees, 0 = north, 90 = east)
   heading: -0.000014,

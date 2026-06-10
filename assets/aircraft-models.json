@@ -53,7 +53,7 @@
     "id": "{18BF2963-E633-486A-B313-D3F0E6D70CB7}",
     "offset": 270,
     "wingspan": 15,
-    "type": "single-prop",
+    "type": "float",
     "library": "internal",
     "package": "esd-modellib-eolib"
   },
@@ -62,7 +62,7 @@
     "id": "{FC422FC7-9584-48D0-B5F2-A0F504918442}",
     "offset": 90,
     "wingspan": 9,
-    "type": "single-prop",
+    "type": "float",
     "library": "internal",
     "package": "esd-modellib-eolib"
   },

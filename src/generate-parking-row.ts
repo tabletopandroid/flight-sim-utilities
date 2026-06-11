@@ -8,8 +8,8 @@ import { placeCrowd } from "./crowd";
 
 const config: RowConfig = {
   // Starting position
-  startLat: 43.995612334,
-  startLon: -88.554664971,
+  startLat: 43.987644447,
+  startLon: -88.565788411,
 
   // Aircraft heading (degrees, 0 = north, 90 = east)
   heading: -0.000014,
@@ -27,13 +27,13 @@ const config: RowConfig = {
   columnLength: 300.0,
 
   // Length of all rows in meters (optional, overrides columnCount)
-  rowLength: 1500, // 60, 1000
+  rowLength: 500, // 60, 1000
 
   // Group ID (match your existing parentGroupID scheme)
-  parentGroupID: 5,
+  parentGroupID: 36,
 
   // Group ID for third-party models — the "DEPENDENCIES/totof" folder
-  thirdPartyGroupID: 35,
+  thirdPartyGroupID: 37,
 
   // Density of placement (optional, adjusts spacing)
   density: "dense",
@@ -46,7 +46,7 @@ const config: RowConfig = {
   columnDirection: 180.0,
 
   // Orientation of aircraft in row (nose-to-nose or tail-to-tail)
-  orientation: "tail-to-tail",
+  orientation: "nose-to-nose",
 
   // Models to place — one is chosen at random for each object
   models: aircraftModels,

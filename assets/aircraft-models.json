@@ -245,5 +245,333 @@
     "type": "turbo-prop",
     "library": "third-party",
     "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-dr-400-tofof-g-bagr",
+    "id": "{A42846E6-06A8-4FF3-A87E-A63354B66B65}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-dr-400-totof",
+    "id": "{3EDAB0DC-982C-4FE4-10B4-171EE30B4002}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-dr-400-totof-fgbvt",
+    "id": "{26972193-526A-4894-E5DA-35AB67088E06}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d112-casa-fphls2",
+    "id": "{104631A0-5D18-408C-5B12-152D9B62BB8C}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d112-casa-fpmer",
+    "id": "{4CB10A00-F027-4927-907F-CFA77FAA8DEF}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d112-livree1",
+    "id": "{B0E1AD81-A1B4-44CA-537A-66FC8548FD87}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-red",
+    "id": "{2012CE19-C8F0-40F1-F1A7-A22A763FF2EA}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-bleu-ciel",
+    "id": "{2634F11C-3224-4A31-8181-43548817AB7F}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-red-black",
+    "id": "{B49B54B3-F8A2-4709-E3C0-1C03FA8F0D39}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-bleu-uni",
+    "id": "{A1D97FBC-3784-472C-5AEC-55C552CFB10E}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-rouge-noir",
+    "id": "{A4581648-C786-4EBB-FD80-E55BE79D7294}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-jaune",
+    "id": "{0A4BB45A-ECD0-40AD-3593-69A257CB5A2D}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-rouge-orange",
+    "id": "{CFE6877A-53D9-46F2-FE5F-332EF6E5BA05}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-orange",
+    "id": "{8D75E76E-1675-494D-210A-8055D7CB834A}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-d140-vert",
+    "id": "{A275EBCF-678E-44EE-30BC-235EE2CC58D9}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-sicile-f-blay",
+    "id": "{E5367941-1C6B-4B9E-6FA6-EFFB36641B22}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-sicile-bleu",
+    "id": "{9655245B-2C31-4DCB-3F09-7DDA7415571E}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-sicile-pastel",
+    "id": "{E67E93F9-E018-4668-C630-9AFB03553F41}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jodel-sicile-bleu-ciel",
+    "id": "{2A857827-2CCC-4BEF-1101-BD6B518278EE}",
+    "wingspan": 10,
+    "type": "homebuilt",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-cap10-totof-fgdtf",
+    "id": "{0E114858-44C8-41F9-5D74-329CA568DCD4}",
+    "wingspan": 9,
+    "type": "aerobatic",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-totof-pitts-yellow",
+    "id": "{ACB52294-E2F8-44E8-50D2-AB81D04693D2}",
+    "wingspan": 9,
+    "type": "aerobatic",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-totof-pitts-red",
+    "id": "{1D49EECA-C30D-44AD-B4B7-9DB37B4826AE}",
+    "wingspan": 9,
+    "type": "aerobatic",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-totof-pitts-white",
+    "id": "{487D507D-72F2-4D3A-2288-8783E3117647}",
+    "wingspan": 9,
+    "type": "aerobatic",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-savage-v2",
+    "id": "{56AC6DCA-D7F9-480D-519C-190B13492AEE}",
+    "wingspan": 11,
+    "type": "bush-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-grasshopper-savage-military",
+    "id": "{900A9F1F-2AA1-4F02-DB07-F5FE208BDD2D}",
+    "wingspan": 11,
+    "type": "bush-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-savage-military",
+    "id": "{72255FA2-1598-4318-53BC-CAADFEF875B3}",
+    "wingspan": 11,
+    "type": "bush-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-savage",
+    "id": "{1063268A-9ADB-41CA-B27D-25AACE1EA39B}",
+    "wingspan": 11,
+    "type": "bush-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-cessna-l19-army",
+    "id": "{593F4027-BE45-4857-843F-BD4B6E29C183}",
+    "wingspan": 11,
+    "type": "bush-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-st10-diplomate",
+    "id": "{778F4C8F-AB10-45D9-3DA3-F5346A9640D5}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-sr22-totof",
+    "id": "{E8A668C8-2AC6-4858-0F0F-9C0A6C454A8E}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-piper28-totof",
+    "id": "{257C1F42-8622-491C-142F-9ED0E89EA04B}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-c172-totof",
+    "id": "{496E16A6-97C2-4E92-30A1-51D09CFA3FE1}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-cessna-172f-hafl",
+    "id": "{1E3B8B3F-09CB-4E71-43FF-B00B1FBC26FE}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-tecnam-p92",
+    "id": "{46F46CB8-7DEA-4BD7-F912-E0F4B57D0087}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-tecnam-p2010",
+    "id": "{2992A2FB-F4CA-41C2-1032-1036B4319437}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-allegro",
+    "id": "{9514425D-A464-4275-1388-809F5C44C5AC}",
+    "wingspan": 12,
+    "type": "ultra-light",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-beech-c18",
+    "id": "{7B2825D2-F8C3-4917-961E-6839D749095E}",
+    "wingspan": 15,
+    "type": "multi-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-cessna-421",
+    "id": "{9F04691C-4D61-4009-98E7-CB738273A45B}",
+    "wingspan": 13,
+    "type": "multi-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-totof-baron-msfs-001",
+    "id": "{A4A4C1B1-385C-4BD7-6DB2-995658F291B6}",
+    "wingspan": 12,
+    "type": "single-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-stearman-totof",
+    "id": "{EC05EDBF-874D-4FF1-95FF-35323C46AD6C}",
+    "wingspan": 10,
+    "type": "bi-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-yak-totof",
+    "id": "{A7210953-997F-4751-BD2C-E607E28C790C}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
   }
 ]

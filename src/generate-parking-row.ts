@@ -8,32 +8,32 @@ import { placeCrowd } from "./crowd";
 
 const config: RowConfig = {
   // Starting position
-  startLat: 43.987644447,
-  startLon: -88.565788411,
+  startLat: 43.983030542,
+  startLon: -88.56340677,
 
   // Aircraft heading (degrees, 0 = north, 90 = east)
-  heading: -0.000014,
+  heading: 90.968544, // -0.000014
 
   // Spacing between aircraft in the same column (meters)
   columnSpacing: 2,
 
   // Spacing between rows (meters). Defaults to columnSpacing if not specified.
-  rowSpacing: 26.0,
+  rowSpacing: 20, // default 26
 
   // Number of aircraft to place
   count: 9,
 
   // Length of each column in meters (optional, overrides count)
-  columnLength: 300.0,
+  columnLength: 250.0,
 
   // Length of all rows in meters (optional, overrides columnCount)
-  rowLength: 500, // 60, 1000
+  rowLength: 100, // 60, 1000
 
   // Group ID (match your existing parentGroupID scheme)
-  parentGroupID: 36,
+  parentGroupID: 7,
 
   // Group ID for third-party models — the "DEPENDENCIES/totof" folder
-  thirdPartyGroupID: 37,
+  thirdPartyGroupID: 27,
 
   // Density of placement (optional, adjusts spacing)
   density: "dense",
@@ -43,7 +43,7 @@ const config: RowConfig = {
 
   // Direction each column extends (degrees)
   // 0 = column runs north, 90 = column runs east
-  columnDirection: 180.0,
+  columnDirection: 90, // 180
 
   // Orientation of aircraft in row (nose-to-nose or tail-to-tail)
   orientation: "nose-to-nose",
@@ -51,7 +51,7 @@ const config: RowConfig = {
   // Models to place — one is chosen at random for each object
   models: aircraftModels,
 
-  aircraftTypes: ["single-prop", "turbo-prop"], // filter to only include models of these types (e.g. "single-prop", "turbo-prop", "jet")
+  aircraftTypes: ["homebuilt", "ultra-light"], // filter to only include models of these types (e.g. "single-prop", "turbo-prop", "jet")
 
   library: ["internal", "third-party"], // filter to only include models from this library (e.g. "internal", "third-party")
 

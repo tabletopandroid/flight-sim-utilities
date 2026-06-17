@@ -1,3 +1,18 @@
+export type AircraftType =
+  | "aerobatic"
+  | "bi-plane"
+  | "bush-plane"
+  | "float"
+  | "homebuilt"
+  | "single-prop"
+  | "multi-prop"
+  | "turbo-prop"
+  | "ultra-light"
+  | "jet"
+  | "military";
+
+export type LibraryType = "internal" | "third-party";
+
 export interface CrowdEntry {
   name: string; // e.g. "Crowd_Standing
   id: string; // GUID string
@@ -31,7 +46,7 @@ export interface RowConfig {
   orientation: "nose-to-nose" | "tail-to-tail";
   density?: "sparse" | "medium" | "dense";
   models: ModelEntry[];
-  aircraftTypes: string[]; // filter to only include models of these types (e.g. "single-prop", "turbo-prop")
+  aircraftTypes: string[]; // filter to only include models of these types (e.g. "single-prop", "turbo-prop", "jet")
   library: string[]; // filter to only include models from this library (e.g. "internal", "third-party")
   parentGroupID: number;
   thirdPartyGroupID?: number; // parentGroupID to use for models whose library is "third-party" (e.g. the "totof" folder), defaults to parentGroupID

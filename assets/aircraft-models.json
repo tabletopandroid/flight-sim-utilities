@@ -573,5 +573,197 @@
     "type": "military",
     "library": "third-party",
     "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-twin-otter",
+    "id": "{BBA7D929-66E9-44BE-ADBC-3DDA0A788D6D}",
+    "wingspan": 20,
+    "type": "multi-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-twin-otter-bleu",
+    "id": "{E91F7537-CC99-4CE9-E434-2B17E8829A20}",
+    "wingspan": 20,
+    "type": "multi-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-twin-otter-orange",
+    "id": "{BFC9BFB9-B7A6-4F10-C31A-77F6B61DDD73}",
+    "wingspan": 20,
+    "type": "multi-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-twin-otter-red",
+    "id": "{44BBC778-AD19-47BC-5E98-7C255EF4FC0B}",
+    "wingspan": 20,
+    "type": "multi-prop",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-c160",
+    "id": "{EBD26B36-329D-4FEE-4754-DCC60E26402D}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jaguar",
+    "id": "{28BA6063-C203-40E7-4695-45557B3258E2}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-alpha-jet",
+    "id": "{9DC6EA1C-A1B3-4824-B757-97B4D58BBAA6}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-f18-super-hornet",
+    "id": "{304F8FDA-7CE7-4457-60B7-455B513663C9}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-jas39",
+    "id": "{F7672E42-E1D1-4A4E-E411-92E1B9CB3632}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-f11-grumman",
+    "id": "{ED0F5110-CA18-4B4F-CF5F-E8097055E749}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-fouga",
+    "id": "{8CF550E2-8896-402E-EFCF-72D1E732DE2C}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-mirage-3",
+    "id": "{DE93782C-9F91-4027-C44F-A4D02272E229}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-mirage-4",
+    "id": "{F7A0A93F-739B-4A0C-032C-A7904FD0AC92}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-mirage-5",
+    "id": "{B5FDF2F5-EB35-46F3-821E-8CAE4E61814A}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-rafale-v1",
+    "id": "{715586D2-AA40-4FBA-6447-22D28CA1CB43}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-rafale-v2",
+    "id": "{DF45BCAF-06CD-4EDD-A36B-C5FF64ADBDFD}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "avion-mirage-m2000-5",
+    "id": "{07418FE4-1E20-4ED7-CDF9-A7C3124EBB20}",
+    "wingspan": 12,
+    "type": "military",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "totof-potez-25",
+    "id": "{7ADC8145-3AB7-4BD6-98C6-552BC13709BD}",
+    "wingspan": 15,
+    "type": "bi-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "totof-biplane-rafre-8",
+    "id": "{5D9CF17B-F635-48FC-B8BB-8C651BC4E235}",
+    "wingspan": 12,
+    "type": "bi-plane",
+    "library": "third-party",
+    "package": "totof-aircraft-library v4"
+  },
+  {
+    "name": "collector-bleriot-xi",
+    "id": "{94B6DA12-3278-454E-3055-327F07C40433}",
+    "wingspan": 8,
+    "type": "vintage",
+    "library": "third-party",
+    "package": "aircraft-collectorv2"
+  },
+  {
+    "name": "collector-demoiselle-ch",
+    "id": "{1DB3A496-C0FE-4E1D-71EA-D62980AFCDDF}",
+    "wingspan": 6,
+    "type": "vintage",
+    "library": "third-party",
+    "package": "aircraft-collectorv2"
+  },
+  {
+    "name": "",
+    "id": "",
+    "wingspan": 8,
+    "type": "vintage",
+    "library": "third-party",
+    "package": "aircraft-collectorv2"
+  },
+  {
+    "name": "",
+    "id": "",
+    "wingspan": 8,
+    "type": "vintage",
+    "library": "third-party",
+    "package": "aircraft-collectorv2"
+  },
+  {
+    "name": "",
+    "id": "",
+    "wingspan": 8,
+    "type": "vintage",
+    "library": "third-party",
+    "package": "aircraft-collectorv2"
   }
 ]

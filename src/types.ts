@@ -2,14 +2,17 @@ export type AircraftType =
   | "aerobatic"
   | "bi-plane"
   | "bush-plane"
-  | "float"
+  | "seaplane"
   | "homebuilt"
   | "single-prop"
   | "multi-prop"
   | "turbo-prop"
   | "ultra-light"
   | "jet"
-  | "military";
+  | "military"
+  | "vintage"
+  | "vintage-military"
+  | "warbird";
 
 export type LibraryType = "internal" | "third-party";
 

@@ -1,12 +1,5 @@
 [
   {
-    "name": "MountainTent01_Dynamic",
-    "id": "{DE802839-CE24-40D2-AB25-9B6174CD1312}",
-    "type": "tent",
-    "library": "internal",
-    "package": "asobo-modellib-assets"
-  },
-  {
     "name": "MountainTent01_Orange",
     "id": "{8D33BA13-A930-462E-B36B-BCACC1146A95}",
     "type": "tent",

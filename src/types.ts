@@ -12,7 +12,8 @@ export type AircraftType =
   | "military"
   | "vintage"
   | "vintage-military"
-  | "warbird";
+  | "warbird-small"
+  | "warbird-large";
 
 export type LibraryType = "internal" | "third-party";
 

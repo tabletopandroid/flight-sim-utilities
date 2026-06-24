@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate-parking-row": "ts-node src/generate-parking-row.ts",
+    "generate": "ts-node src/generate-parking-row.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

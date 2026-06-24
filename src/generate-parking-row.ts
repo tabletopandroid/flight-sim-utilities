@@ -6,16 +6,24 @@ import { ModelEntry, RowConfig } from "./types";
 import { placeTent } from "./tent";
 import { placeCrowd } from "./crowd";
 
+// an adjustment is used if a model has an offset
+const baseCorrection: Record<number, number> = {
+  0: 90,
+  90: 0,
+  180: 90,
+  270: 180,
+};
+
 const config: RowConfig = {
   // Starting position
-  startLat: 43.99044752,
-  startLon: -88.560101373,
+  startLat: 43.990704086,
+  startLon: -88.562764192,
 
   // Aircraft heading (degrees, 0 = north, 90 = east)
-  heading: 90.968544, // -0.000014
+  heading: 0, // -0.000014
 
   // Spacing between aircraft in the same column (meters)
-  columnSpacing: 2,
+  columnSpacing: 8, // default 6
 
   // Spacing between rows (meters). Defaults to columnSpacing if not specified.
   rowSpacing: 26, // default 26
@@ -24,16 +32,16 @@ const config: RowConfig = {
   count: 9,
 
   // Length of each column in meters (optional, overrides count)
-  columnLength: 300.0,
+  columnLength: 140.0,
 
   // Length of all rows in meters (optional, overrides columnCount)
-  rowLength: 100, // 60, 1000
+  rowLength: 220, // 60, 1000
 
   // Group ID (match your existing parentGroupID scheme)
-  parentGroupID: 41,
+  parentGroupID: 20,
 
   // Group ID for third-party models — the "DEPENDENCIES/totof" folder
-  thirdPartyGroupID: 42,
+  thirdPartyGroupID: 35,
 
   // Density of placement (optional, adjusts spacing)
   density: "dense",
@@ -51,12 +59,12 @@ const config: RowConfig = {
   // Models to place — one is chosen at random for each object
   models: aircraftModels,
 
-  aircraftTypes: ["warbird"], // filter to only include models of these types (e.g. "single-prop", "turbo-prop", "jet")
+  aircraftTypes: ["aerobatic"], // filter to only include models of these types (e.g. "single-prop", "turbo-prop", "jet")
 
   library: ["internal", "third-party"], // filter to only include models from this library (e.g. "internal", "third-party")
 
   // Enable tent placement
-  tents: false,
+  tents: true,
 
   // Probability of placing a tent near each aircraft (0-1, default 0.2)
   tentDensity: 0.6,
@@ -84,13 +92,7 @@ function generateParkingRow(cfg: RowConfig): string {
     ? densityProbabilities[cfg.density]
     : 1.0;
 
-  // Apply tail-to-tail spacing reduction (tighter packing) — the lateral stagger
-  // below lets neighboring tails nest past each other, so the column can run tighter
-  const tailToTailSpacingMultiplier =
-    cfg.orientation === "tail-to-tail" ? 0.2 : 1.0;
-
-  const effectiveColumnSpacing =
-    cfg.columnSpacing * tailToTailSpacingMultiplier;
+  const effectiveColumnSpacing = cfg.columnSpacing; // legacy wording
   const effectiveRowSpacing = cfg.rowSpacing ?? cfg.columnSpacing;
 
   // Filter models to only those matching the configured aircraft types and library
@@ -184,7 +186,7 @@ function generateParkingRow(cfg: RowConfig): string {
 
       // calculate adjustment to intended heading
       let offsetHeading = model.offset
-        ? cfg.heading - model.offset
+        ? model.offset - baseCorrection[cfg.heading]
         : cfg.heading;
 
       // Apply orientation: tail-to-tail means alternating headings

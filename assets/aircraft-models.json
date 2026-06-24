@@ -34,7 +34,7 @@
   {
     "name": "ESD_AC_J3_Cub",
     "id": "{C02880D3-92FC-45CF-9E50-4DE222465ADB}",
-    "offset": 90,
+    "offset": 270,
     "wingspan": 11,
     "type": "single-prop",
     "library": "internal",
@@ -78,7 +78,7 @@
   {
     "name": "totof-beech002",
     "id": "{21A2F54E-7DBF-4D38-F0AC-47379F07EE01}",
-    "offset": 90,
+    "offset": 270,
     "wingspan": 11,
     "type": "single-prop",
     "library": "third-party",
@@ -112,7 +112,7 @@
   {
     "name": "totof-savage",
     "id": "{BB3E9743-8C5D-40E3-71DF-E4C5514F7780}",
-    "offset": 270,
+    "offset": 180,
     "wingspan": 11,
     "type": "single-prop",
     "library": "third-party",
@@ -121,7 +121,7 @@
   {
     "name": "totof-savage-v2",
     "id": "{F0495063-80E4-4B85-0D29-A3B97B38ADAA}",
-    "offset": 90,
+    "offset": 180,
     "wingspan": 11,
     "type": "single-prop",
     "library": "third-party",
@@ -139,6 +139,7 @@
   {
     "name": "totof-ulm-skyranger",
     "id": "{5310C8F3-0D9D-4C91-E3E2-BA5EB0D41488}",
+    "offset": 90,
     "wingspan": 10,
     "type": "single-prop",
     "library": "third-party",
@@ -147,6 +148,7 @@
   {
     "name": "totof-ulm-skyranger-bleu",
     "id": "{2DD1AF21-0752-4AF8-3F6E-7D288982C073}",
+    "offset": 90,
     "wingspan": 10,
     "type": "single-prop",
     "library": "third-party",
@@ -213,7 +215,7 @@
   {
     "name": "totof-tbm900-01",
     "id": "{F9BFDE94-F371-43E8-DCA0-53BF3746ACEA}",
-    "offset": 270,
+    "offset": 180,
     "wingspan": 13,
     "type": "turbo-prop",
     "library": "third-party",
@@ -222,7 +224,7 @@
   {
     "name": "totof-tbm900-02",
     "id": "{6C3C4E8B-D878-4334-7BDB-8796AF2B850B}",
-    "offset": 90,
+    "offset": 180,
     "wingspan": 13,
     "type": "turbo-prop",
     "library": "third-party",
@@ -231,7 +233,7 @@
   {
     "name": "totof-tbm900-03",
     "id": "{1DF1D30E-2D8C-4A94-68E1-BA56CFE1C37C}",
-    "offset": 90,
+    "offset": 180,
     "wingspan": 13,
     "type": "turbo-prop",
     "library": "third-party",
@@ -240,7 +242,7 @@
   {
     "name": "totof-tbm900-05",
     "id": "{0B47B787-9A91-4694-4F9F-8DBF20346221}",
-    "offset": 90,
+    "offset": 180,
     "wingspan": 13,
     "type": "turbo-prop",
     "library": "third-party",
@@ -433,6 +435,7 @@
   {
     "name": "avion-savage-v2",
     "id": "{56AC6DCA-D7F9-480D-519C-190B13492AEE}",
+    "offset": 180,
     "wingspan": 11,
     "type": "bush-plane",
     "library": "third-party",
@@ -441,6 +444,7 @@
   {
     "name": "avion-grasshopper-savage-military",
     "id": "{900A9F1F-2AA1-4F02-DB07-F5FE208BDD2D}",
+    "offset": 180,
     "wingspan": 11,
     "type": "bush-plane",
     "library": "third-party",
@@ -449,6 +453,7 @@
   {
     "name": "avion-savage-military",
     "id": "{72255FA2-1598-4318-53BC-CAADFEF875B3}",
+    "offset": 180,
     "wingspan": 11,
     "type": "bush-plane",
     "library": "third-party",
@@ -457,6 +462,7 @@
   {
     "name": "avion-savage",
     "id": "{1063268A-9ADB-41CA-B27D-25AACE1EA39B}",
+    "offset": 180,
     "wingspan": 11,
     "type": "bush-plane",
     "library": "third-party",
@@ -553,6 +559,7 @@
   {
     "name": "avion-totof-baron-msfs-001",
     "id": "{A4A4C1B1-385C-4BD7-6DB2-995658F291B6}",
+    "offset": 270,
     "wingspan": 12,
     "type": "single-prop",
     "library": "third-party",
@@ -729,6 +736,7 @@
   {
     "name": "collector-bleriot-xi",
     "id": "{94B6DA12-3278-454E-3055-327F07C40433}",
+    "offset": 90,
     "wingspan": 8,
     "type": "vintage",
     "library": "third-party",
@@ -737,6 +745,7 @@
   {
     "name": "collector-demoiselle-ch",
     "id": "{1DB3A496-C0FE-4E1D-71EA-D62980AFCDDF}",
+    "offset": 90,
     "wingspan": 6,
     "type": "vintage",
     "library": "third-party",
@@ -745,6 +754,7 @@
   {
     "name": "collector-14-bisbois",
     "id": "{B46B6D4B-DD7B-448B-7CD3-79B8176D5F2E}",
+    "offset": 270,
     "wingspan": 12,
     "type": "vintage",
     "library": "third-party",
@@ -753,6 +763,7 @@
   {
     "name": "collector-farman",
     "id": "{BF762A70-0414-4E17-DFEA-233E2097679B}",
+    "offset": 90,
     "wingspan": 13,
     "type": "vintage",
     "library": "third-party",
@@ -761,6 +772,7 @@
   {
     "name": "collector-caudron-g3",
     "id": "{E73A50A1-0CAC-46DA-B35D-6845D27350B8}",
+    "offset": 90,
     "wingspan": 14,
     "type": "vintage-military",
     "library": "third-party",
@@ -769,6 +781,7 @@
   {
     "name": "collector-d510",
     "id": "{0E0A9566-E3B6-4823-8929-DF944A2DC29B}",
+    "offset": 90,
     "wingspan": 13,
     "type": "vintage-military",
     "library": "third-party",
@@ -777,6 +790,7 @@
   {
     "name": "collector-fokker-iii",
     "id": "{8587B944-4176-41E0-A1B3-241D766D7F98}",
+    "offset": 90,
     "wingspan": 10,
     "type": "vintage-military",
     "library": "third-party",
@@ -785,6 +799,7 @@
   {
     "name": "collector-breguet-cigogne",
     "id": "{CA68319A-877D-44B3-5CD9-14EF75E8E9B3}",
+    "offset": 90,
     "wingspan": 15,
     "type": "vintage-military",
     "library": "third-party",
@@ -793,6 +808,7 @@
   {
     "name": "collector-curtis-jenny",
     "id": "{EA0FDC6A-4A34-4E87-D677-AE16677B3FA8}",
+    "offset": 90,
     "wingspan": 14,
     "type": "vintage-military",
     "library": "third-party",
@@ -801,6 +817,7 @@
   {
     "name": "collector-breguet-14",
     "id": "{0FD032E4-61EE-42F7-5F57-2F242FD77BA0}",
+    "offset": 90,
     "wingspan": 15,
     "type": "vintage-military",
     "library": "third-party",
@@ -809,6 +826,7 @@
   {
     "name": "collector-gladiator",
     "id": "{209592B4-8E1A-40D4-A16E-90712EDE1237}",
+    "offset": 90,
     "wingspan": 10,
     "type": "vintage-military",
     "library": "third-party",
@@ -849,6 +867,7 @@
   {
     "name": "collector-junker-w34",
     "id": "{7B1CA7D3-FA38-4435-E335-BF27BEB98D73}",
+    "offset": 90,
     "wingspan": 18,
     "type": "vintage",
     "library": "third-party",
@@ -857,6 +876,7 @@
   {
     "name": "collector-dehavilland-89",
     "id": "{9219CFD9-9C9D-4FE0-698C-6B2048C9FF7C}",
+    "offset": 90,
     "wingspan": 15,
     "type": "vintage",
     "library": "third-party",
@@ -865,6 +885,7 @@
   {
     "name": "collector-flamant",
     "id": "{C38909E6-7EEC-4D58-1480-FAB902996658}",
+    "offset": 90,
     "wingspan": 13,
     "type": "vintage-military",
     "library": "third-party",
@@ -889,30 +910,34 @@
   {
     "name": "collector-p38",
     "id": "{8E378045-B01B-460A-0681-FF2F1B104BF2}",
+    "offset": 180,
     "wingspan": 16,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-b25-north-american",
     "id": "{6E416F20-30E1-4337-9A0F-FC55DEEDC7A5}",
+    "offset": 90,
     "wingspan": 21,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-p38-n2",
     "id": "{2DC89F31-CAB6-4EE8-2F17-0F1E6A93F8AC}",
+    "offset": 90,
     "wingspan": 16,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-fokker-g1",
     "id": "{AAE59DEB-9CC1-44A6-332F-A9B0172DB2C7}",
+    "offset": 90,
     "wingspan": 18,
     "type": "vintage-military",
     "library": "third-party",
@@ -938,7 +963,7 @@
     "name": "collector-bf-109",
     "id": "{C4833060-49D1-489A-6DBE-4029F91830F7}",
     "wingspan": 10,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -946,15 +971,16 @@
     "name": "collector-curtis-p40",
     "id": "{94A762E1-3A0C-40A0-8B70-4C4C99F9D2E3}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-grumaan-avenger",
     "id": "{B3E5A741-23BE-4390-7418-43B70B533600}",
+    "offset": 90,
     "wingspan": 17,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -962,7 +988,7 @@
     "name": "collector-vought-f4u-cosair",
     "id": "{A19E78AA-6BE2-4C4E-88CB-F688BEA20948}",
     "wingspan": 13,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -977,8 +1003,9 @@
   {
     "name": "collector-dewoitine-d520",
     "id": "{49B5B615-A2DE-4FAA-3E41-0CD6F4F12FF7}",
+    "offset": 90,
     "wingspan": 11,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -986,15 +1013,16 @@
     "name": "collector-p51-mustang",
     "id": "{838AB3A5-0E00-4365-A162-A0DEC95A6EB8}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-yakovlev-15",
     "id": "{0A42920C-6885-44FF-9305-41338798F3BE}",
+    "offset": 90,
     "wingspan": 10,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -1002,63 +1030,70 @@
     "name": "collector-ki-100-japan",
     "id": "{E78D415B-EAD1-4956-3302-BB5BDCD60C29}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-martin-am-mauler",
     "id": "{994AFFF4-C774-407E-FC0F-FAC4D5E99815}",
+    "offset": 90,
     "wingspan": 16,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-ju-87-stuka",
     "id": "{7C46E0F6-3FEB-4AA3-2D3E-891D98DD2A54}",
+    "offset": 180,
     "wingspan": 14,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-a6m-zero-jap",
     "id": "{8A68D509-5797-4935-B120-EC3C816662F9}",
+    "offset": 180,
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-north-american-28-trojan",
     "id": "{1E67E723-25B0-4BFD-DC7E-40F31AFAFD36}",
+    "offset": 90,
     "wingspan": 13,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-f6f-hellcat",
     "id": "{8F25C027-EB4A-4613-C6F9-A30416AF8DE1}",
+    "offset": 90,
     "wingspan": 14,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-t6-texan",
     "id": "{26828D19-90D7-4B6B-08C6-9A53C7D19215}",
+    "offset": 90,
     "wingspan": 13,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-nakajima-b5n",
     "id": "{7AE97B23-24A0-431A-CBA0-7385F61FF983}",
+    "offset": 90,
     "wingspan": 16,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -1066,31 +1101,34 @@
     "name": "collector-spitfire-p7370",
     "id": "{4A3F6AB5-DC28-4566-5C6A-A627A2F17552}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-spitfire-mk9n58",
     "id": "{C64433BB-C06F-47E5-1C97-AA35D9BB3E3B}",
+    "offset": 90,
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-t6-texan-2",
     "id": "{240FFABB-317C-49F0-3B99-6ED0593F9AB5}",
+    "offset": 90,
     "wingspan": 13,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-dhc1-chipmunk",
     "id": "{9721AD4D-F80F-443D-38B1-123A906FC2B7}",
+    "offset": 90,
     "wingspan": 11,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -1098,7 +1136,7 @@
     "name": "collector-spitfire-challenge",
     "id": "{F8F7DCFD-2A68-47D4-0E7E-294D88630D0F}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -1106,23 +1144,25 @@
     "name": "collector-spitfire-mkix",
     "id": "{4CB7B6AC-2410-4EA0-147D-BB5233E6FA6E}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-f4f-wildcat",
     "id": "{7E282998-EF66-4F92-7DDB-18B02E412FE3}",
+    "offset": 90,
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-ryan-pt22",
     "id": "{3B7E431F-6545-45B0-CAAD-232733467787}",
+    "offset": 90,
     "wingspan": 10,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -1130,7 +1170,7 @@
     "name": "collector-spitfire-s897",
     "id": "{84602753-E54E-4792-D1D3-5E87EBC1F774}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
@@ -1138,13 +1178,14 @@
     "name": "collector-spitfire-ar213",
     "id": "{32BA0E9D-0D12-44B4-69E7-1B0CF3F4FAA2}",
     "wingspan": 12,
-    "type": "warbird",
+    "type": "warbird-small",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-douglas-dc3",
     "id": "{59270A44-F15F-444A-FF7E-EA436CFB2473}",
+    "offset": 90,
     "wingspan": 29,
     "type": "vintage",
     "library": "third-party",
@@ -1153,6 +1194,7 @@
   {
     "name": "collector-lockheed-constellation",
     "id": "{3D2BB7FA-177F-4871-F3D0-41642E8BB634}",
+    "offset": 90,
     "wingspan": 38,
     "type": "vintage",
     "library": "third-party",
@@ -1161,6 +1203,7 @@
   {
     "name": "collector-cl415",
     "id": "{90DD4875-30FF-4D4B-66AF-14C7ABE40E6D}",
+    "offset": 90,
     "wingspan": 29,
     "type": "seaplane",
     "library": "third-party",
@@ -1169,6 +1212,7 @@
   {
     "name": "collector-couzinet-70",
     "id": "{0F2ECA3F-A130-43F3-2067-7E3BE98D4FEB}",
+    "offset": 90,
     "wingspan": 33,
     "type": "vintage",
     "library": "third-party",
@@ -1177,48 +1221,54 @@
   {
     "name": "collector-avro-lancaster",
     "id": "{2D651198-0A49-48D3-F9F8-D56A307BD1C4}",
+    "offset": 90,
     "wingspan": 32,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-b24-liberator",
     "id": "{ED609C78-9137-4E96-E49F-28FE694B8A46}",
+    "offset": 90,
     "wingspan": 34,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-b17",
     "id": "{62F7BBC9-9429-4B54-2FAA-1D63B3867972}",
+    "offset": 270,
     "wingspan": 32,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-stirling",
     "id": "{209D5CF5-EBE7-4E8F-396D-F9DC595EB00E}",
+    "offset": 90,
     "wingspan": 31,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-b17-v2",
     "id": "{41A06B83-0B22-421E-D7AD-4F19FEC9486E}",
+    "offset": 90,
     "wingspan": 32,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   },
   {
     "name": "collector-douglas-dc3-military",
     "id": "{D22CB998-9F16-4670-48EC-E60A04A95500}",
+    "offset": 90,
     "wingspan": 29,
-    "type": "warbird",
+    "type": "warbird-large",
     "library": "third-party",
     "package": "aircraft-collectorv2"
   }
